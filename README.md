@@ -12,14 +12,18 @@
 #### Association
 - has_many :messages
 - has_many :members
+- has_many :groups
 
 ### groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|null: false|
+|master_user_id|integer|null: false, foreign_key: true|
 
 #### Association
 - has_many :members
+- belongs_to :user
+
 
 ### membersテーブル
 |Column|Type|Options|
