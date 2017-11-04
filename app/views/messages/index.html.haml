@@ -7,13 +7,13 @@
         %h3
           テストの名前です
         .chat-user__actions
-          %a.chat-user__action
+          = link_to '/', class: 'chat-user__action' do
             %i.fa.fa-pencil-square-o
-          %a.chat-user__action
+          = link_to '/', class: 'chat-user__action' do
             %i.fa.fa-cog
       %ul.chat-groups
         %li.chat-group
-          %a.chat-group__link
+          = link_to '/', class: 'chat-group__link' do
             %p.chat-group__name
               テストのグループ名
             %p.chat-group__message
@@ -34,8 +34,7 @@
             %span.chat-header__user
               member四
         .chat-header--edit
-          %a.chat-header__edit-btn
-            Edit
+          = link_to 'Edit', '/', class: 'chat-header__edit-btn'
       .chat-body
         %ul.chat-messages
           %li.chat-message
