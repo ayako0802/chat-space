@@ -1,0 +1,20 @@
+.layout{
+  &-notice,
+  &-alert{
+    color: $mono_color01;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    text-align: center;
+  }
+  &-notice{
+    background-color:$blue_color01;
+  }
+  &-alert{
+    background-color:$red_color01;
+  }
+  &-notification {
+    flex: 1;
+  }
+}
