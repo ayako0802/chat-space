@@ -1,0 +1,56 @@
+%p.layout-notice
+  チャットグループが作成されました。（テスト）
+.layout-notification
+  .chat
+    .chat-side
+      .chat-user.clearfix
+        %h3
+          テストの名前です
+        .chat-user__actions
+          = link_to '/', class: 'chat-user__action' do
+            %i.fa.fa-pencil-square-o
+          = link_to '/', class: 'chat-user__action' do
+            %i.fa.fa-cog
+      %ul.chat-groups
+        %li.chat-group
+          = link_to '/', class: 'chat-group__link' do
+            %p.chat-group__name
+              テストのグループ名
+            %p.chat-group__message
+              テストのメッセージ
+    .chat-main
+      .chat-header.clearfix
+        .chat-header--info
+          %h1
+            サンプルグループ
+          .chat-header__users
+            Members:
+            %span.chat-header__user
+              member01
+            %span.chat-header__user
+              member02
+            %span.chat-header__user
+              member03
+            %span.chat-header__user
+              member四
+        .chat-header--edit
+          = link_to 'Edit', '/', class: 'chat-header__edit-btn'
+      .chat-body
+        %ul.chat-messages
+          %li.chat-message
+            .chat-message__header.clearfix
+              %p.chat-message__name
+                momotaro
+              %p.chat-message__time
+                2017/11/04 05:51:28
+            %p.chat-message__body
+              テストメッセージ
+      .chat-footer
+        %form#new_message.new_message
+          %input{type: 'hidden',name: 'utf8',value: ''}
+          .chat-footer__body
+            %textarea#message_body
+            %label.chat-footer__file
+              %input#message_image{type: 'file',name: 'message[image]'}
+              %i.fa.fa-image
+          %input{type: 'submit',name: 'commit',value: 'Send',data:{disable:{with: 'Send'}}}
